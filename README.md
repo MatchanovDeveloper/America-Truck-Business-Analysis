@@ -1,55 +1,50 @@
 # 🚛 America Truck Business Analysis — Power BI Dashboard
 
-Power BI’da tayyorlangan interaktiv biznes tahlil dashboardi. Loyihada AQShdagi yuk tashish (trucking) biznesi bo‘yicha ma’lumotlar tahlil qilingan va DAX yordamida yillar kesimida solishtiruvchi ko‘rsatkichlar yaratilgan.
+An interactive business analysis dashboard built in Power BI. The project analyzes U.S. trucking business data and uses DAX to build year-over-year comparative metrics.
 
-## 📌 Loyiha haqida
+## 📌 About the Project
 
-Ma’lumotlar tayyor Excel fayl shaklida olingan va Power BI’ga yuklab, star schema modeli asosida qayta ishlangan. Maqsad — biznes ko‘rsatkichlarini (daromad, foyda, yetkazib berish samaradorligi) real vaqt rejimida kuzatish va oldingi yil bilan solishtirish imkonini beruvchi dashboard yaratish edi.
+The dataset was provided as a prepared Excel file and loaded into Power BI, where it was modeled using a star schema. The goal was to build a dashboard that tracks key business metrics — revenue, profit, and delivery efficiency — in real time and compares them against the previous year.
 
-## 🛠 Ishlatilgan vositalar
+## 🛠 Tools Used
 
-- **Power BI Desktop** — modellashtirish va vizualizatsiya
-- **DAX** — measure’lar va vaqt intelligensiyasi (time intelligence)
-- **Excel** — dastlabki ma’lumotlar manbai
+- **Power BI Desktop** — data modeling and visualization
+- **DAX** — measures and time intelligence
+- **Excel** — source data
 
-## 🗂 Ma’lumotlar modeli
+## 🗂 Data Model
 
-Star schema arxitekturasi:
-- **Trip** — fakt jadval (har bir reys bo‘yicha ma’lumotlar: daromad, xarajat, masofa, sana va h.k.)
-- **State** — o‘lchov (dimension) jadvali — shtatlar bo‘yicha geografik kesim
+Star schema architecture:
+- **Trip** — fact table (per-trip data: revenue, cost, distance, date, etc.)
+- **State** — dimension table for geographic breakdown by state
 
-## 📐 Yaratilgan DAX measure’lar
+## 📐 DAX Measures
 
-- Umumiy daromad (Total Revenue) va foyda (Profit)
-- Yetkazib berish darajasi (Delivery Rate)
-- Faol haydovchilar va yuk mashinalari soni
-- Oldingi yil bilan solishtirish — `SAMEPERIODLASTYEAR` / `DATEADD` funksiyalari asosida YoY (Year-over-Year) o‘sish/pasayish foizi
-- Trend ko‘rsatkichlari uchun shartli ▲ / ▼ belgilar va rang formatlash (yashil — o‘sish, qizil — pasayish)
+- Total Revenue and Profit
+- Delivery Rate
+- Active driver and truck counts
+- Year-over-year comparison using `SAMEPERIODLASTYEAR` / `DATEADD` functions
+- Conditional ▲ / ▼ trend indicators with color formatting (green for growth, red for decline)
 
-## 📊 Dashboard imkoniyatlari
+## 📊 Dashboard Features
 
-- KPI kartalar — asosiy ko‘rsatkichlar va ularning yillik dinamikasi
-- Gauge vizual — maqsad va bajarilish darajasini ko‘rsatish
-- Line chart’lar — vaqt bo‘yicha trend tahlili
-- Clustered bar chart va jadval — shtatlar kesimida taqqoslash
-- Slicer’lar — sana, shtat va boshqa kesimlar bo‘yicha filtrlash
-- Dark va Light rejim — ikkita alohida sahifa ko‘rinishida
+- KPI cards showing key metrics and their year-over-year trend
+- Gauge visual for tracking targets vs. actuals
+- Line charts for time-based trend analysis
+- Clustered bar chart and table for state-level comparison
+- Slicers for filtering by date, state, and other dimensions
+- Dark and Light mode, built as separate report pages
 
-## 🖼 Skrinshotlar
+## 🖼 Screenshots
 
-> `screenshots/` papkasiga dashboard sahifalaridan skrinshotlar qo‘shing (Power BI Desktop’da faylni oching → har bir sahifani PNG sifatida eksport qiling yoki Snipping Tool orqali screenshot oling).
+> Screenshots of the dashboard pages are in the `screenshots/` folder.
 
-## 🚀 Faylni ochish
+## 🚀 How to Open
 
-1. [Power BI Desktop](https://www.microsoft.com/power-platform/products/power-bi/downloads) o‘rnatilgan bo‘lishi kerak
-2. `.pbix` faylini yuklab oling
-3. Power BI Desktop orqali oching
+1. Install [Power BI Desktop](https://www.microsoft.com/power-platform/products/power-bi/downloads)
+2. Download the `.pbix` file
+3. Open it with Power BI Desktop
 
-## 📫 Bog‘lanish
+## 📫 Contact
 
-Savol yoki fikr-mulohazalar bo‘lsa, LinkedIn orqali murojaat qilishingiz mumkin.
-
----
-### English Summary
-
-Interactive Power BI dashboard analyzing U.S. trucking business performance, built from a prepared Excel dataset. Implemented a star schema (Trip fact table + State dimension table) and wrote DAX measures for revenue, profit, delivery rate, and fleet/driver counts, including year-over-year comparisons with trend indicators (▲/▼) and conditional formatting. The report includes KPI cards, gauge visuals, trend line charts, interactive slicers, and dark/light theme pages.
+Feel free to reach out via LinkedIn with any questions or feedback.
