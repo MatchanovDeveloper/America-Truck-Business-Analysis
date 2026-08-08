@@ -35,6 +35,19 @@ Star schema architecture:
 - Slicers for filtering by date, state, and other dimensions
 - Dark and Light mode, built as separate report pages
 
+## 🔍 Key Insights & Recommendations
+
+A few things stood out while analyzing the data.
+
+Profit margin slipped slightly (from ~52% to ~50%) even though revenue stayed stable — a sign that costs are rising faster than revenue, worth a closer look.
+
+One driver has a noticeably lower delivery success rate (~84% vs. ~91% average), and a large share of failed deliveries trace back to them — likely worth investigating the cause.
+
+A few trucks and specific long-haul routes consistently show lower margins than the rest of the fleet, suggesting they could use a maintenance check or a pricing review.
+
+Overall, the dashboard is most useful when checked regularly to catch under performing drivers, trucks, and routes early.
+
+
 ## 🖼 Screenshots
 
 > Screenshots of the dashboard pages are in the `screenshots/` folder.
